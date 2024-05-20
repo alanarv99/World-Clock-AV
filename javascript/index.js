@@ -1,31 +1,46 @@
 function updateTime() {
-  let athensDateElement = document.querySelector(".date");
-  let athensTimeElement = document.querySelector(".time");
-  let athensTime = moment().tz("Europe/Athens");
-  athensDateElement.innerHTML = athensTime.format("MMMM Do YYYY");
-  athensTimeElement.innerHTML = athensTime.format(
-    "h:mm:ss [<small>]A[</small>]"
-  );
+  let athensElement = document.querySelector("#athens");
+  if (athensElement) {
+    let athensDateElement = athensElement.querySelector(".date");
+    let athensTimeElement = athensElement.querySelector(".time");
+    let athensTime = moment().tz("Europe/Athens");
 
-  let parisDateElement = document.querySelector("#parisDate");
-  let paristimeElement = document.querySelector("#parisTime");
-  let parisTime = moment().tz("Europe/Paris");
-  parisDateElement.innerHTML = parisTime.format("MMMM Do YYYY");
-  paristimeElement.innerHTML = parisTime.format("h:mm:ss [<small>]A[</small>]");
+    athensDateElement.innerHTML = athensTime.format("MMMM Do YYYY");
+    athensTimeElement.innerHTML = athensTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+  let parisElement = document.querySelector("#paris");
+  if (parisElement) {
+    let parisDateElement = parisElement.querySelector(".date");
+    let paristimeElement = parisElement.querySelector(".time");
+    let parisTime = moment().tz("Europe/Paris");
 
-  let tokyoDateElement = document.querySelector("#tokyoDate");
-  let tokyotimeElement = document.querySelector("#tokyoTime");
-  let tokyoTime = moment().tz("Asia/Tokyo");
-  tokyoDateElement.innerHTML = tokyoTime.format("MMMM Do YYYY");
-  tokyotimeElement.innerHTML = tokyoTime.format("h:mm:ss [<small>]A[</small>]");
-
-  let kolkataDateElement = document.querySelector("#kolkataDate");
-  let kolkatatimeElement = document.querySelector("#kolkataTime");
-  let kolkataTime = moment().tz("Asia/Kolkata");
-  kolkataDateElement.innerHTML = kolkataTime.format("MMMM Do YYYY");
-  kolkatatimeElement.innerHTML = kolkataTime.format(
-    "h:mm:ss[<small>]A[</small>]"
-  );
+    parisDateElement.innerHTML = parisTime.format("MMMM Do YYYY");
+    paristimeElement.innerHTML = parisTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+  let tokyoElement = document.querySelector("#tokyo");
+  if (tokyoElement) {
+    let tokyoDateElement = tokyoElement.querySelector(".date");
+    let tokyotimeElement = tokyoElement.querySelector(".time");
+    let tokyoTime = moment().tz("Asia/Tokyo");
+    tokyoDateElement.innerHTML = tokyoTime.format("MMMM Do YYYY");
+    tokyotimeElement.innerHTML = tokyoTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+  let kolkataElement = document.querySelector("#kolkata");
+  if (kolkataElement) {
+    let kolkataDateElement = kolkataElement.querySelector(".date");
+    let kolkataTimeElement = kolkataElement.querySelector(".time");
+    let kolkataTime = moment().tz("Asia/Kolkata");
+    kolkataDateElement.innerHTML = kolkataTime.format("MMMM Do YYYY");
+    kolkataTimeElement.innerHTML = kolkataTime.format(
+      "h:mm:ss[<small>]A[</small>]"
+    );
+  }
 }
 function updateCityDropdown(event) {
   let cityTimezone = event.target.value;
