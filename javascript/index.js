@@ -1,6 +1,6 @@
 function updateTime() {
-  let athensDateElement = document.querySelector("#athensDate");
-  let athensTimeElement = document.querySelector("#athensTime");
+  let athensDateElement = document.querySelector(".date");
+  let athensTimeElement = document.querySelector(".time");
   let athensTime = moment().tz("Europe/Athens");
   athensDateElement.innerHTML = athensTime.format("MMMM Do YYYY");
   athensTimeElement.innerHTML = athensTime.format(
@@ -27,4 +27,25 @@ function updateTime() {
     "h:mm:ss[<small>]A[</small>]"
   );
 }
+function updateCityDropdown(event) {
+  let cityTimezone = event.target.value;
+  let cityName = cityTimezone.replace("_", " ").split("/")[1];
+  let cityTime = moment.tz(cityTimezone);
+  console.log(cityTime.format("MMMM Do YYYY"));
+  let citiesElement = document.querySelector("#cities");
+  citiesElement.innerHTML = ` <div class="city">
+          <div>
+            <h2>${cityName}</h2>
+            <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
+          </div>
+          <div class="time">${cityTime.format(
+            "h:mm:ss"
+          )}<small>${cityTime.format("A")}</small></div>
+        </div>
+  `;
+}
+
 setInterval(updateTime);
+
+let cityDropdownSelectElement = document.querySelector("#cityDropdown");
+cityDropdownSelectElement.addEventListener("change", updateCityDropdown);

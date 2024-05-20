@@ -11,40 +11,42 @@
   <body>
     <div class="container">
       <h1>World Clock</h1>
-      <select>
+      <select id="cityDropdown">
         <option value="">Select a city...</option>
-        <option value="london">London</option>
-        <option value="newyork">New York</option>
-        <option value="aukland">Aukland</option>
-        <option value="tokyo">Tokyo</option>
+        <option value="Europe/London">London</option>
+        <option value="America/New_York">New York</option>
+        <option value="Pacific/Auckland">Auckland</option>
+        <option value="Asia/Tokyo">Tokyo</option>
       </select>
-      <div class="city" id="athens">
-        <div>
-          <h2>Athens 🏛️</h2>
-          <div class="date" id="athensDate"></div>
+      <div id="cities">
+        <div class="city" id="athens">
+          <div>
+            <h2>Athens 🏛️</h2>
+            <div class="date" id="athensDate"></div>
+          </div>
+          <div class="time" id="athensTime"></div>
         </div>
-        <div class="time" id="athensTime"></div>
-      </div>
-      <div class="city" id="paris">
-        <div>
-          <h2>Paris 🗼</h2>
-          <div class="date" id="parisDate"></div>
+        <div class="city" id="paris">
+          <div>
+            <h2>Paris 🗼</h2>
+            <div class="date" id="parisDate"></div>
+          </div>
+          <div class="time" id="parisTime"></div>
         </div>
-        <div class="time" id="parisTime"></div>
-      </div>
-      <div class="city" id="tokyo">
-        <div>
-          <h2>Tokyo ⛩️</h2>
-          <div class="date" id="tokyoDate"></div>
+        <div class="city" id="tokyo">
+          <div>
+            <h2>Tokyo ⛩️</h2>
+            <div class="date" id="tokyoDate"></div>
+          </div>
+          <div class="time" id="tokyoTime"></div>
         </div>
-        <div class="time" id="tokyoTime"></div>
-      </div>
-      <div class="city" id="tokyo">
-        <div>
-          <h2>Kolkata 🕌</h2>
-          <div class="date" id="kolkataDate"></div>
+        <div class="city" id="tokyo">
+          <div>
+            <h2>Kolkata 🕌</h2>
+            <div class="date" id="kolkataDate"></div>
+          </div>
+          <div class="time" id="kolkataTime"></div>
         </div>
-        <div class="time" id="kolkataTime"></div>
       </div>
     </div>
     <footer>
