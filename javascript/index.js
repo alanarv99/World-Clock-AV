@@ -7,7 +7,7 @@ function updateTime() {
 
     athensDateElement.innerHTML = athensTime.format("MMMM Do YYYY");
     athensTimeElement.innerHTML = athensTime.format(
-      "h:mm:ss [<small>]A[</small>]"
+      "h:mm:ss [<small>] A[</small>]"
     );
   }
   let parisElement = document.querySelector("#paris");
@@ -18,7 +18,7 @@ function updateTime() {
 
     parisDateElement.innerHTML = parisTime.format("MMMM Do YYYY");
     paristimeElement.innerHTML = parisTime.format(
-      "h:mm:ss [<small>]A[</small>]"
+      "h:mm:ss [<small>] A[</small>]"
     );
   }
   let tokyoElement = document.querySelector("#tokyo");
@@ -28,7 +28,7 @@ function updateTime() {
     let tokyoTime = moment().tz("Asia/Tokyo");
     tokyoDateElement.innerHTML = tokyoTime.format("MMMM Do YYYY");
     tokyotimeElement.innerHTML = tokyoTime.format(
-      "h:mm:ss [<small>]A[</small>]"
+      "h:mm:ss [<small>] A[</small>]"
     );
   }
   let kolkataElement = document.querySelector("#kolkata");
@@ -38,7 +38,7 @@ function updateTime() {
     let kolkataTime = moment().tz("Asia/Kolkata");
     kolkataDateElement.innerHTML = kolkataTime.format("MMMM Do YYYY");
     kolkataTimeElement.innerHTML = kolkataTime.format(
-      "h:mm:ss[<small>]A[</small>]"
+      "h:mm:ss[<small>] A[</small>]"
     );
   }
 }
@@ -55,7 +55,7 @@ function updateCityDropdown(event) {
           </div>
           <div class="time">${cityTime.format(
             "h:mm:ss"
-          )}<small>${cityTime.format("A")}</small></div>
+          )}<small> ${cityTime.format("A")}</small></div>
         </div>
   `;
 }
